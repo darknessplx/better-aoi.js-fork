@@ -4,13 +4,13 @@ const AoiError = require("../classes/AoiError.js");
 
 module.exports = async () => {
     try {
-        const res = await fetch("https://registry.npmjs.org/aoi.js", {
+        const res = await fetch("https://registry.npmjs.org/better-aoi.js", {
             dispatcher: new Agent({
                 keepAliveTimeout: 10000, // 10 seconds
                 keepAliveMaxTimeout: 15000 // 15 seconds
             }),
             headers: {
-                "User-Agent": "aoi.js" // required by npm registry API
+                "User-Agent": "better-aoi.js" // required by npm registry API
             }
         });
 
@@ -19,7 +19,7 @@ module.exports = async () => {
         const isDevVersion = json.version.includes("dev");
 
         if (!isDevVersion && json.version !== latestVersion) {
-            AoiError.createConsoleMessage([{ text: 'Outdated version detected, update with "npm install aoi.js@latest"', textColor: "red" }], "white", { text: "AoiWarning", textColor: "yellow" });
+            AoiError.createConsoleMessage([{ text: 'Outdated version detected, update with "npm install better-aoi.js@latest"', textColor: "red" }], "white", { text: "AoiWarning", textColor: "yellow" });
         } else if (isDevVersion) {
             AoiError.createConsoleMessage(
                 [
