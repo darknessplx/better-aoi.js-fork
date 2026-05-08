@@ -1,11 +1,11 @@
 <p align="center">
   <a href="https://aoi.js.org">
-    <img width="500" src="https://github.com/aoijs/website/blob/master/assets/images/aoijs-banner.png?raw=true" alt="aoijs">
+    <img width="500" src="https://i.postimg.cc/KvCzhVBh/better-aoi-js-fork.png" alt="better-aoi.js">
   </a>
 </p>
 
 <div align="center">
-  <b>The most powerful string package to create a simple and fast Discord Bot.</b>
+  <b>The most advanced string-based package with better features to create a Discord Bot fast and powerful.</b>
 </div>
 
 ---
@@ -38,7 +38,7 @@
 
 <div align = "center">
 
-**[ Documentation ](https://aoi.js.org/)** | **[ Support Server ](https://discord.gg/HMUfMXDQsV)** | **[ NPM ](https://npmjs.org/package/aoi.js)** | **[ GitHub ](https://github.com/aoijs/aoi.js)**
+**[ Official Documentation ](https://aoi.js.org/)** | **[ Official Support Server ](https://discord.gg/HMUfMXDQsV)** | **[ Official NPM ](https://npmjs.org/package/aoi.js)** | **[ Official GitHub ](https://github.com/aoijs/aoi.js)**
 
 </div>
 
@@ -46,28 +46,22 @@
 
 ## About
 
-aoi.js is a JavaScript library that is designed to make it easy to build Discord bots.
+**better-aoi.js** is a JavaScript library designed to make it even easier to build Discord bots. 
 
-It is open-source and free to use, and provides a simple, easy-to-use interface for interacting with the Discord API and
-handling events.
-
-aoi.js is suitable for beginners who are new to building bots, as well as experienced developers who want to save time
-and streamline their workflow.
+**This is an unofficial, enhanced fork of [aoi.js](https://github.com/aoijs/aoi.js).** It is open-source and free to use under the Apache License 2.0. better-aoi.js is suitable for beginners who are new to building bots, as well as experienced developers who want to save time, streamline their workflow, and use **better features**.
 
 ## Features
 
-- **600+ Pre-built Functions:** aoi.js comes packed with over 600 pre-built functions that empower you to create dynamic
-  and interactive Discord bots with ease.
-- **Built-in Custom Local Database:** With aoi.js, you get a powerful custom local database out of the box.
-- **Extensions for Added Functionality:** Enhance your bots capabilities with aoi.js extensions like aoi.music and
-  aoi.panel. These extensions make it simple to add music playback, interactive panels, and more to your bot.
-- **Easy-to-Use and Beginner Friendly:** aoi.js boasts a user-friendly syntax that is perfect for beginners. The
-  simple `$` prefix makes it easy to write commands and get your bot up and running quickly.
+- **Better Features:** Enhanced and optimized functions to provide a more powerful development experience.
+- **600+ Pre-built Functions:** better-aoi.js includes all original functions that empower you to create dynamic and interactive Discord bots with ease.
+- **Built-in Custom Local Database:** Like the original, you get a powerful custom local database out of the box.
+- **Easy-to-Use and Beginner Friendly:** better-aoi.js boasts a user-friendly syntax. The simple `$` prefix makes it easy to write commands and get your bot up and running quickly.
 
 ## Setup
 
 ```javascript
-const {AoiClient} = require("aoi.js");
+// Install using: npm install better-aoi.js
+const {AoiClient} = require("better-aoi.js");
 
 const client = new AoiClient({
     intents: ["MessageContent", "Guilds", "GuildMessages"],
@@ -86,7 +80,7 @@ client.command({
 ### Adding Database
 
 ```javascript
-const {AoiClient} = require("aoi.js");
+const {AoiClient} = require("better-aoi.js");
 
 const client = new AoiClient({
     intents: ["MessageContent", "Guilds", "GuildMessages"],
@@ -111,7 +105,7 @@ client.command({
 
 ## Command Handler
 
-By default, aoi.js does not have a command handler. However, you can easily add one by using the `loadCommands` method.
+By default, better-aoi.js does not have a command handler. However, you can easily add one by using the `loadCommands` method.
 
 ```javascript
 client.loadCommands("./commands/", true);
@@ -120,11 +114,13 @@ client.loadCommands("./commands/", true);
 - `./commands/` is the directory where your commands are located.
 - `true` allows to log the commands in console.
 
-## Notices
+## Notices & License
 
+- **Fork Notice**: This project is a modified version (fork) of [aoi.js](https://github.com/aoijs/aoi.js). All original credits to Akarui Development.
+- **License**: Licensed under the [Apache License 2.0](http://apache.org).
 - **Reading Functions**: Currently it reads `$` functions from bottom to top.
 
-## Official Extensions
+## Official Extensions (aoi.js)
 
 <div align="center">
   <a href="https://aoi.js.org/extensions/aoijs/aoipanel/">
@@ -135,6 +131,10 @@ client.loadCommands("./commands/", true);
   </a>
 </div>
 
+> [!IMPORTANT]
+> This is a fork. All original credit goes to **Akarui Development** and the aoi.js contributors. This project is licensed under the Apache License 2.0.
+
+
 ## Contributing
 
-[Refer to contribution documentation for more information](https://github.com/aoijs/aoi.js/blob/v6/.github/CONTRIBUTING.md)
+[Refer to original contribution documentation for more information](https://github.com/aoijs/aoi.js/blob/v6/.github/CONTRIBUTING.md)
