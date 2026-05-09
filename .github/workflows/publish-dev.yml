@@ -21,12 +21,12 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 9
 
-      - name: Install Node v19
+      - name: Install Node v20
         uses: actions/setup-node@v4
         with:
-          node-version: 19
+          node-version: 20
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
