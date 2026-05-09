@@ -1,6 +1,11 @@
   "name": "better-aoi.js",
-  "description": "A powerful package to create Discord Bots with built-in string functions.",
-  "author": "Leref <itzleref@gmail.com>",
+  "description": "A powerful package to create Discord Bots with built-in string functions (fork)",
+  "author": "venxsa <little.f3x@gmail.com>",
+  "contributors": [
+    "Leref <itzleref@gmail.com>",
+    "Akarui Development <https://github.com/AkaruiDevelopment>"
+  ],
+
   "main": "src/index.js",
   "typings": "src/index.d.ts",
   "scripts": {
@@ -23,12 +28,13 @@
       "url": "https://www.apache.org/licenses/LICENSE-2.0"
     }
   ],
-  "homepage": "https://aoi.js.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aoijs/aoi.js.git"
+    "url": "https://github.com/venxsa/better-aoi.js-fork.git"
   },
   "keywords": [
+    "betteraoi.js",
+    "forked",
     "aoi.js",
     "aoijs",
     "aoi",
