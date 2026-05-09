@@ -16,7 +16,7 @@ module.exports = async () => {
             ],
             "white",
             {
-                text: "aoi.js ",
+                text: "better-aoi.js ",
                 textColor: "cyan"
             }
         );
