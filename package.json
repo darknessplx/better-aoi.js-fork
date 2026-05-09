@@ -1,3 +1,4 @@
+{
   "name": "better-aoi.js",
   "description": "A powerful package to create Discord Bots with built-in string functions (fork)",
   "author": "venxsa <little.f3x@gmail.com>",
@@ -5,7 +6,7 @@
     "Leref <itzleref@gmail.com>",
     "Akarui Development <https://github.com/AkaruiDevelopment>"
   ],
-
+{
   "main": "src/index.js",
   "typings": "src/index.d.ts",
   "scripts": {
@@ -67,3 +68,4 @@
   },
   "type": "commonjs",
   "types": "./src/index.d.ts"
+}
