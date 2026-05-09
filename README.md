@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://aoi.js.org">
-    <img width="500" src="https://i.postimg.cc/KvCzhVBh/better-aoi-js-fork.png" alt="better-aoi.js">
+    <img width="500" src="https://i.postimg.cc/KvCzhVBh/better-aoi-js-fork.png" alt="better-aoi.js-fork">
   </a>
 </p>
 
@@ -46,22 +46,22 @@
 
 ## About
 
-**better-aoi.js** is a JavaScript library designed to make it even easier to build Discord bots. 
+**better-aoi.js-fork** is a JavaScript library designed to make it even easier to build Discord bots. 
 
-**This is an unofficial, enhanced fork of [aoi.js](https://github.com/aoijs/aoi.js).** It is open-source and free to use under the Apache License 2.0. better-aoi.js is suitable for beginners who are new to building bots, as well as experienced developers who want to save time, streamline their workflow, and use **better features**.
+**This is an unofficial, enhanced fork of [aoi.js](https://github.com/aoijs/aoi.js).** It is open-source and free to use under the Apache License 2.0. better-aoi.js-fork is suitable for beginners who are new to building bots, as well as experienced developers who want to save time, streamline their workflow, and use **better features**.
 
 ## Features
 
 - **Better Features:** Enhanced and optimized functions to provide a more powerful development experience.
-- **600+ Pre-built Functions:** better-aoi.js includes all original functions that empower you to create dynamic and interactive Discord bots with ease.
+- **600+ Pre-built Functions:** better-aoi.js-fork includes all original functions that empower you to create dynamic and interactive Discord bots with ease.
 - **Built-in Custom Local Database:** Like the original, you get a powerful custom local database out of the box.
-- **Easy-to-Use and Beginner Friendly:** better-aoi.js boasts a user-friendly syntax. The simple `$` prefix makes it easy to write commands and get your bot up and running quickly.
+- **Easy-to-Use and Beginner Friendly:** better-aoi.js-fork boasts a user-friendly syntax. The simple `$` prefix makes it easy to write commands and get your bot up and running quickly.
 
 ## Setup
 
 ```javascript
-// Install using: npm install better-aoi.js
-const {AoiClient} = require("better-aoi.js");
+// Install using: npm install better-aoi.js-fork
+const {AoiClient} = require("better-aoi.js-fork");
 
 const client = new AoiClient({
     intents: ["MessageContent", "Guilds", "GuildMessages"],
@@ -80,7 +80,7 @@ client.command({
 ### Adding Database
 
 ```javascript
-const {AoiClient} = require("better-aoi.js");
+const {AoiClient} = require("better-aoi.js-fork");
 
 const client = new AoiClient({
     intents: ["MessageContent", "Guilds", "GuildMessages"],
@@ -105,7 +105,7 @@ client.command({
 
 ## Command Handler
 
-By default, better-aoi.js does not have a command handler. However, you can easily add one by using the `loadCommands` method.
+By default, better-aoi.js-fork does not have a command handler. However, you can easily add one by using the `loadCommands` method.
 
 ```javascript
 client.loadCommands("./commands/", true);

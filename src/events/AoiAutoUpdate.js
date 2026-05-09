@@ -5,13 +5,13 @@ const AoiError = require("../classes/AoiError.js");
 
 module.exports = async () => {
     try {
-        const res = await fetch("https://registry.npmjs.org/better-aoi.js", {
+        const res = await fetch("https://registry.npmjs.org/better-aoi.js-fork", {
             dispatcher: new Agent({
                 keepAliveTimeout: 10000,
                 keepAliveMaxTimeout: 15000
             }),
             headers: {
-                "User-Agent": "better-aoi.js"
+                "User-Agent": "better-aoi.js-fork"
             }
         });
 
@@ -24,7 +24,7 @@ module.exports = async () => {
                         textColor: "white"
                     },
                     {
-                        text: "better-aoi.js is outdated!",
+                        text: "better-aoi.js-fork is outdated!",
                         textColor: "red"
                     },
                     {
@@ -36,31 +36,31 @@ module.exports = async () => {
                         textColor: "white"
                     },
                     {
-                        text: "Installing latest better-aoi.js version...",
+                        text: "Installing latest better-aoi.js-fork version...",
                         textColor: "yellow"
                     }
                 ],
                 "white",
-                { text: "better-aoi.js AutoUpdate ", textColor: "yellow" }
+                { text: "better-aoi.js-fork AutoUpdate ", textColor: "yellow" }
             );
 
-            const Process = exec("npm i better-aoi.js@latest", (error) => {
+            const Process = exec("npm i better-aoi.js-fork@latest", (error) => {
                 if (error)
                     return AoiError.createConsoleMessage(
                         [
                             {
-                                text: `better-aoi.js AutoUpdate: ERR! ${error.message}`,
+                                text: `better-aoi.js-fork AutoUpdate: ERR! ${error.message}`,
                                 textColor: "red"
                             }
                         ],
                         "white",
-                        { text: "better-aoi.js AutoUpdate", textColor: "yellow" }
+                        { text: "better-aoi.js-fork AutoUpdate", textColor: "yellow" }
                     );
 
                 AoiError.createConsoleMessage(
                     [
                         {
-                            text: `Successfully Installed better-aoi.js v${data["dist-tags"].latest}.`,
+                            text: `Successfully Installed better-aoi.js-fork v${data["dist-tags"].latest}.`,
                             textColor: "white"
                         },
                         {
@@ -73,7 +73,7 @@ module.exports = async () => {
                         }
                     ],
                     "white",
-                    { text: "better-aoi.js AutoUpdate  ", textColor: "yellow" }
+                    { text: "better-aoi.js-fork AutoUpdate  ", textColor: "yellow" }
                 );
 
                 setTimeout(Reboot, 3000);
@@ -85,12 +85,12 @@ module.exports = async () => {
         AoiError.createConsoleMessage(
             [
                 {
-                    text: "better-aoi.js AutoUpdate: Unexpected error when trying to reach API.",
+                    text: "better-aoi.js-fork AutoUpdate: Unexpected error when trying to reach API.",
                     textColor: "red"
                 }
             ],
             "white",
-            { text: "better-aoi.js AutoUpdate ", textColor: "yellow" }
+            { text: "better-aoi.js-fork AutoUpdate ", textColor: "yellow" }
         );
     }
 };
@@ -109,12 +109,12 @@ function Reboot() {
         AoiError.createConsoleMessage(
             [
                 {
-                    text: `better-aoi.js AutoUpdate: ERR! Failed to commence 'RESTART', ${e.message}`,
+                    text: `better-aoi.js-fork AutoUpdate: ERR! Failed to commence 'RESTART', ${e.message}`,
                     textColor: "red"
                 }
             ],
             "white",
-            { text: "better-aoi.js AutoUpdate ", textColor: "yellow" }
+            { text: "better-aoi.js-fork AutoUpdate ", textColor: "yellow" }
         );
     }
 }

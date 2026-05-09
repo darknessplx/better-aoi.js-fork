@@ -16,7 +16,7 @@ const PATH = require("path");
  * @returns {boolean}
  */
 function hasAoijsCustomFunction(functionList, client) {
-    const allAoijsCustomFunctions = client.functionManager.cache.filter((x) => x instanceof CustomFunction && x.type === "better-aoi.js");
+    const allAoijsCustomFunctions = client.functionManager.cache.filter((x) => x instanceof CustomFunction && x.type === "better-aoi.js-fork");
     return allAoijsCustomFunctions.some((_, x) => functionList.some((y) => y === "$" + x));
 }
 

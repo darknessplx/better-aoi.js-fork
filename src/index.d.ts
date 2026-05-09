@@ -393,7 +393,7 @@ export type Interpreter = (
 /**
  * Available custom function types that FunctionManager supports.
  */
-export type CustomFunctionTypes = "better-aoi.js" | "djs";
+export type CustomFunctionTypes = "better-aoi.js-fork" | "djs";
 
 /**
  * Base custom function interface.
@@ -404,9 +404,9 @@ export interface BaseCustomFunction<T extends CustomFunctionTypes> {
 }
 
 /**
- * Represents the structure for a better-aoi.js custom function type.
+ * Represents the structure for a better-aoi.js-fork custom function type.
  */
-export interface CustomAoiJSFunction<Type = "better-aoi.js"> extends BaseCustomFunction<Type> {
+export interface CustomAoiJSFunction<Type = "better-aoi.js-fork"> extends BaseCustomFunction<Type> {
     params?: string[];
     code: string;
 }
