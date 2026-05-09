@@ -16,32 +16,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
 
       - name: Install Node v19
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: 19
-          registry-url: https://npmjs.org
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
-        run: npx pnpm i
+        run: pnpm install --frozen-lockfile
 
       - name: Set version (auto-increment patch)
-        id: set_version
         run: |
           CURRENT_VERSION=$(jq -r '.version' package.json)
           MAJOR=$(echo "$CURRENT_VERSION" | cut -d. -f1)
           MINOR=$(echo "$CURRENT_VERSION" | cut -d. -f2)
           PATCH=$(echo "$CURRENT_VERSION" | cut -d. -f3)
-
           NEW_PATCH=$((PATCH + 1))
           NEW_VERSION="${MAJOR}.${MINOR}.${NEW_PATCH}"
-
           echo "Setting version to: $NEW_VERSION"
-          npm version --git-tag-version=false "$NEW_VERSION"
+          npm version --no-git-tag-version "$NEW_VERSION"
 
       - name: Publish
-        run: npm publish || true
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
