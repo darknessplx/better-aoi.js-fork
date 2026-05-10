@@ -2,9 +2,6 @@ name: publish-stable
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - v6
 
 concurrency:
   group: publish-stable-${{ github.ref }}
